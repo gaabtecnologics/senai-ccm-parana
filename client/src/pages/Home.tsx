@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/yQuTLWprsiqF_8de2f911.jpg"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/cdjfctIsFz2X_b5a603ee.jpg"
                 alt="Laboratório SENAI"
                 className="rounded-lg shadow-2xl"
               />
@@ -281,7 +281,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/z0SjVbtp25vk_5cf4408e.jpg"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/AxaCW0AFD0US_271917d4.png"
               alt="Alunos celebrando sucesso"
               className="rounded-lg shadow-lg"
             />
@@ -325,7 +325,7 @@ export default function Home() {
               </div>
             </div>
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/hnfoAdYJsLmt_8948665b.jpg"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/KAOvudTJZ3Bm_51d90672.jpg"
               alt="Parceria SENAI com indústria"
               className="rounded-lg shadow-lg"
             />
