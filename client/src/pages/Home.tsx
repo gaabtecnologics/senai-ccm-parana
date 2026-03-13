@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/hero-laboratory-C86JALwyQicebQ3LKZPw8m.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/yQuTLWprsiqF_8de2f911.jpg"
                 alt="Laboratório SENAI"
                 className="rounded-lg shadow-2xl"
               />
@@ -281,7 +281,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/students-success-P4RjzngaMs5hgD5uVE4WnF.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/z0SjVbtp25vk_5cf4408e.jpg"
               alt="Alunos celebrando sucesso"
               className="rounded-lg shadow-lg"
             />
@@ -325,7 +325,7 @@ export default function Home() {
               </div>
             </div>
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/industry-partnership-B2G7ZeJSyA6hEFx22PTQ7e.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/hnfoAdYJsLmt_8948665b.jpg"
               alt="Parceria SENAI com indústria"
               className="rounded-lg shadow-lg"
             />
@@ -392,7 +392,7 @@ export default function Home() {
               </div>
             </div>
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/future-careers-STAk9yYo4KTrSWv5KYkDK5.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/SGkUS71z6tV4_39620ef5.webp"
               alt="Carreiras futuras"
               className="rounded-lg shadow-2xl"
             />
