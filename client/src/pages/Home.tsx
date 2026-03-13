@@ -392,7 +392,7 @@ export default function Home() {
               </div>
             </div>
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/SGkUS71z6tV4_39620ef5.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/3TjvlWn9VGDD_e2a5b867.jpg"
               alt="Carreiras futuras"
               className="rounded-lg shadow-2xl"
             />
