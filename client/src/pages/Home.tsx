@@ -9,6 +9,12 @@ import { ArrowRight, Award, Briefcase, Code, Cpu, GraduationCap, Lightbulb, User
  * - Integração visual das duas instituições (SENAI + CCM)
  * - Cores: Azul Profundo (#1e3a8a) + Verde Vibrante (#16a34a)
  * - Tipografia: Poppins Bold para títulos, Inter Regular para corpo
+ * 
+ * INFORMAÇÕES VERIFICADAS (2026):
+ * - 6.521 vagas SENAI
+ * - 345 colégios cívico-militares
+ * - 21 cursos técnicos diferentes
+ * - 38 unidades SENAI
  */
 
 export default function Home() {
@@ -75,21 +81,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Estatísticas */}
+      {/* Estatísticas Atualizadas */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-900 mb-2">6.473</div>
-              <p className="text-gray-700 font-medium">Alunos Beneficiados em 2025</p>
+              <div className="text-4xl font-bold text-blue-900 mb-2">6.521</div>
+              <p className="text-gray-700 font-medium">Vagas Abertas em 2026</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">90,5%</div>
               <p className="text-gray-700 font-medium">Preferência das Indústrias</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-900 mb-2">144</div>
-              <p className="text-gray-700 font-medium">Escolas Participantes</p>
+              <div className="text-4xl font-bold text-blue-900 mb-2">345</div>
+              <p className="text-gray-700 font-medium">Colégios Cívico-Militares</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
@@ -211,28 +217,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cursos Oferecidos */}
+      {/* Cursos Oferecidos - 21 Cursos Técnicos */}
       <section id="cursos" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-blue-900 mb-4">
-              Cursos Técnicos Disponíveis
+              21 Cursos Técnicos Disponíveis
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Formação técnica em áreas estratégicas para a indústria, com carga horária de 1.200 horas
+              Formação técnica em áreas estratégicas para a indústria, com duração de 12, 18 ou 24 meses
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { nome: "Mecatrônica", icon: <Cpu className="h-6 w-6" /> },
-              { nome: "Eletromecânica", icon: <Code className="h-6 w-6" /> },
+              { nome: "Administração", icon: <Briefcase className="h-6 w-6" /> },
+              { nome: "Alimentos", icon: <Code className="h-6 w-6" /> },
               { nome: "Automação Industrial", icon: <Cpu className="h-6 w-6" /> },
               { nome: "Biotecnologia", icon: <Lightbulb className="h-6 w-6" /> },
-              { nome: "Química", icon: <Code className="h-6 w-6" /> },
+              { nome: "Celulose e Papel", icon: <Code className="h-6 w-6" /> },
+              { nome: "Cibersistemas para Automação", icon: <Cpu className="h-6 w-6" /> },
               { nome: "Desenvolvimento de Sistemas", icon: <Code className="h-6 w-6" /> },
-              { nome: "Inteligência Artificial", icon: <Lightbulb className="h-6 w-6" /> },
-              { nome: "Eletrotécnica", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Design Gráfico", icon: <Lightbulb className="h-6 w-6" /> },
+              { nome: "Edificações", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Eletromecânica", icon: <Code className="h-6 w-6" /> },
+              { nome: "Eletrônica", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Eletrotécnica", icon: <Code className="h-6 w-6" /> },
+              { nome: "Logística", icon: <Briefcase className="h-6 w-6" /> },
+              { nome: "Manutenção Automotiva", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Mecânica", icon: <Code className="h-6 w-6" /> },
+              { nome: "Mecatrônica", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Mineração", icon: <Lightbulb className="h-6 w-6" /> },
+              { nome: "Qualidade", icon: <Award className="h-6 w-6" /> },
+              { nome: "Química", icon: <Code className="h-6 w-6" /> },
+              { nome: "Refrigeração e Climatização", icon: <Cpu className="h-6 w-6" /> },
+              { nome: "Segurança do Trabalho", icon: <Award className="h-6 w-6" /> },
             ].map((curso, idx) => (
               <Card key={idx} className="p-6 flex items-center gap-4 hover:shadow-md transition-shadow border-0">
                 <div className="bg-green-100 p-3 rounded-lg text-green-600">
@@ -240,7 +259,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-bold text-blue-900">{curso.nome}</h3>
-                  <p className="text-sm text-gray-600">1.200 horas | Integrado ao Ensino Médio</p>
+                  <p className="text-sm text-gray-600">12, 18 ou 24 meses | Presencial ou EAD</p>
                 </div>
               </Card>
             ))}
@@ -249,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Sucesso de Alunos */}
-      <section className="py-20">
+      <section id="depoimentos" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-blue-900 mb-4">
@@ -350,13 +369,27 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Comunidade Educacional</h4>
-                    <p className="text-blue-100">Rede de colégios cívico-militares com excelência educacional</p>
+                    <p className="text-blue-100">Rede de 345 colégios cívico-militares com excelência educacional</p>
                   </div>
                 </div>
               </div>
-              <Button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-6 text-lg font-bold">
-                Saiba Mais Sobre Umuarama
-              </Button>
+              <div className="bg-white/10 p-6 rounded-lg mb-8">
+                <h4 className="font-bold text-lg mb-4">SENAI Umuarama</h4>
+                <p className="text-blue-100 mb-2"><strong>Endereço:</strong> Rua Capital da Amizade, 2635 - Jardim Colibri</p>
+                <p className="text-blue-100 mb-2"><strong>CEP:</strong> 87506-305</p>
+                <p className="text-blue-100 mb-2"><strong>Telefone:</strong> (44) 3639-1220</p>
+                <p className="text-blue-100"><strong>Horário:</strong> 8h às 17h20</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-bold text-lg mb-4">Cursos em Umuarama</h4>
+                <ul className="text-blue-100 space-y-2">
+                  <li>✓ Eletrotécnica</li>
+                  <li>✓ Edificações</li>
+                  <li>✓ Automação Industrial</li>
+                  <li>✓ Eletrônica</li>
+                  <li>✓ Mecânica Industrial</li>
+                </ul>
+              </div>
             </div>
             <img 
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385167336/K3tkZv4hPizuMeoPYXWB5m/future-careers-STAk9yYo4KTrSWv5KYkDK5.webp"
@@ -404,9 +437,9 @@ export default function Home() {
               <div className="text-5xl font-bold text-blue-900 mb-4">2026</div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Novos Horizontes</h3>
               <div className="space-y-2 text-gray-700">
-                <p>14 cursos técnicos</p>
-                <p>IA incluída</p>
-                <p>Expansão contínua</p>
+                <p>6.521 vagas</p>
+                <p>21 cursos técnicos</p>
+                <p>345 colégios CCM</p>
               </div>
             </Card>
           </div>
@@ -420,7 +453,7 @@ export default function Home() {
             Pronto para Transformar Seu Futuro?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Inscreva-se agora em um dos cursos técnicos gratuitos do SENAI nos Colégios Cívico-Militares do Paraná
+            Inscreva-se agora em um dos 21 cursos técnicos gratuitos do SENAI nos Colégios Cívico-Militares do Paraná
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg">
@@ -431,7 +464,8 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-blue-100 mt-8">
-            Contato SENAI Umuarama: (44) 3639-1220 | senaipr.org.br/cursos
+            <strong>SENAI Umuarama:</strong> (44) 3639-1220 | senaipr.org.br/cursos-tecnicos<br/>
+            <strong>Inscrições:</strong> Até 09 de março de 2026 | Aulas iniciam em 23 de fevereiro
           </p>
         </div>
       </section>
@@ -442,14 +476,15 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h4 className="font-bold text-white mb-4">Sobre</h4>
-              <p className="text-sm">Parceria entre SENAI e Colégios Cívico-Militares do Paraná para educação técnica de qualidade.</p>
+              <p className="text-sm">Parceria entre SENAI e Colégios Cívico-Militares do Paraná para educação técnica de qualidade em 345 instituições.</p>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-4">Cursos</h4>
+              <h4 className="font-bold text-white mb-4">Cursos Principais</h4>
               <ul className="text-sm space-y-2">
                 <li><a href="#" className="hover:text-white">Mecatrônica</a></li>
                 <li><a href="#" className="hover:text-white">Automação Industrial</a></li>
                 <li><a href="#" className="hover:text-white">Desenvolvimento de Sistemas</a></li>
+                <li><a href="#" className="hover:text-white">Ver todos os 21 cursos</a></li>
               </ul>
             </div>
             <div>
@@ -458,6 +493,7 @@ export default function Home() {
                 <li>SENAI Umuarama</li>
                 <li>(44) 3639-1220</li>
                 <li>senaipr.org.br</li>
+                <li>educacao.pr.gov.br</li>
               </ul>
             </div>
             <div>
@@ -466,11 +502,13 @@ export default function Home() {
                 <li><a href="#" className="hover:text-white">Instagram</a></li>
                 <li><a href="#" className="hover:text-white">Facebook</a></li>
                 <li><a href="#" className="hover:text-white">YouTube</a></li>
+                <li><a href="#" className="hover:text-white">LinkedIn</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
             <p>&copy; 2026 Parceria SENAI & Colégios Cívico-Militares do Paraná. Todos os direitos reservados.</p>
+            <p className="mt-2 text-gray-500">Informações verificadas e atualizadas em março de 2026</p>
           </div>
         </div>
       </footer>
