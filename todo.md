@@ -71,3 +71,19 @@ Uma base simples e legível, com poucos arquivos, separação clara entre marca�
 - [x] Substituir `vite.config.ts` por `vite.config.js` sem tipos TypeScript.
 - [x] Preservar apenas o proxy de imagens e a configuração necessária para a pré-visualização.
 - [x] Reiniciar e validar o ambiente depois da troca.
+
+## Estrutura PHP sem ferramentas de build
+
+- [x] Criar uma estrutura final com apenas `index.php`, `assets/css/`, `assets/js/`, `includes/` e arquivos de configuração PHP úteis.
+- [x] Remover Vite, Node, TypeScript, dependências, lockfile e arquivos de build.
+- [x] Substituir o proxy de imagens por URLs públicas estáveis ou assets locais leves.
+- [x] Incluir utilitários PHP mínimos para metadados, dados da página e cabeçalho/rodapé.
+- [x] Manter navegação responsiva, rolagem suave, acessibilidade e links oficiais funcionando sem dependências externas de JavaScript.
+- [x] Testar a página em servidor PHP nativo e revisar os arquivos finais.
+
+## Resultado da validação
+
+- [x] `index.php` e os três utilitários em `includes/` passaram na validação de sintaxe PHP.
+- [x] CSS, JavaScript, imagens públicas, links e página principal retornaram corretamente pelo servidor PHP nativo.
+- [x] A revisão visual confirmou a renderização do hero, da navegação, das estatísticas e das imagens de instalações sem pessoas.
+- [x] A estrutura não possui Vite, TypeScript, Node, `package.json`, lockfile ou arquivos de build.
