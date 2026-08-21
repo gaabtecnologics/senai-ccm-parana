@@ -1,0 +1,226 @@
+/*
+ * SENAI + CCM-PR | Corporate Modernism
+ * Azul profundo, verde de ação, tipografia editorial e layout assimétrico.
+ * CSS puro, sem Tailwind, sem componentes externos.
+ */
+
+:root {
+    --blue-950: #10275f;
+    --blue-900: #173d96;
+    --blue-800: #214db8;
+    --blue-700: #2c5dd2;
+    --blue-100: #eaf0ff;
+    --green-600: #05a84f;
+    --green-700: #05883f;
+    --green-100: #e3f8eb;
+    --ink: #172033;
+    --muted: #5d6678;
+    --paper: #ffffff;
+    --mist: #f4f7fb;
+    --line: #dce3ee;
+    --shadow: 0 18px 50px rgba(23, 61, 150, .12);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --ease-out: cubic-bezier(.23, 1, .32, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+body.menu-open { overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+
+.container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+    position: fixed; left: 16px; top: -80px; z-index: 100;
+    padding: 10px 14px; border-radius: 8px; background: var(--green-600); color: #fff;
+}
+.skip-link:focus { top: 16px; }
+
+.site-header {
+    position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.95);
+    border-bottom: 1px solid rgba(220,227,238,.85); backdrop-filter: blur(14px);
+}
+.header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.brand { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.brand img:first-child { width: 164px; height: auto; }
+.brand-ccm { width: 48px; height: 48px; object-fit: contain; }
+.brand-divider { width: 1px; height: 38px; background: var(--line); }
+.main-nav { display: flex; align-items: center; gap: 32px; font-size: .95rem; font-weight: 600; color: #394152; }
+.main-nav a { padding: 8px 0; transition: color .18s ease; }
+.main-nav a:hover, .main-nav a:focus-visible { color: var(--blue-800); }
+.menu-toggle { display: none; border: 0; background: transparent; padding: 10px; cursor: pointer; }
+.menu-toggle span:not(.sr-only) { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--blue-900); transition: transform .18s ease, opacity .18s ease; }
+
+.hero { position: relative; overflow: hidden; background: linear-gradient(118deg, var(--blue-950), var(--blue-800)); color: #fff; }
+.hero::after { content: ""; position: absolute; right: -12%; bottom: -45%; width: 70%; height: 100%; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; transform: rotate(-15deg); }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: clamp(40px, 7vw, 92px); align-items: center; min-height: 560px; padding-block: 78px; }
+.hero-copy { max-width: 600px; }
+.eyebrow { margin: 0 0 14px; color: var(--green-700); font-size: .76rem; font-weight: 800; letter-spacing: .14em; line-height: 1.2; text-transform: uppercase; }
+.eyebrow-light { color: #90efb9; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: Poppins, Inter, Arial, sans-serif; line-height: 1.12; letter-spacing: -.03em; }
+h1 { max-width: 650px; margin-bottom: 24px; font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 800; }
+h2 { margin-bottom: 18px; color: var(--blue-950); font-size: clamp(2.2rem, 4vw, 4rem); }
+h3 { color: var(--blue-950); font-size: 1.25rem; }
+.hero-lead { max-width: 580px; margin-bottom: 32px; color: #dae6ff; font-size: clamp(1.05rem, 1.8vw, 1.28rem); }
+.hero-orb { position: absolute; z-index: 0; width: 340px; height: 340px; border-radius: 50%; filter: blur(4px); opacity: .23; }
+.hero-orb-one { top: -220px; right: 8%; background: var(--green-600); }
+.hero-orb-two { bottom: -260px; left: 8%; background: #4476e5; }
+.button-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 50px; padding: 12px 20px; border: 1px solid transparent; border-radius: 10px; font-weight: 700; transition: transform .16s var(--ease-out), background .18s ease, color .18s ease, border-color .18s ease; }
+.button:hover { transform: translateY(-2px); }
+.button:active { transform: scale(.97); }
+.button-primary { background: var(--green-600); color: #fff; }
+.button-primary:hover { background: #08bd5a; }
+.button-outline { border-color: rgba(255,255,255,.8); color: #fff; }
+.button-outline:hover { background: #fff; color: var(--blue-900); }
+.button-light { background: #fff; color: var(--blue-900); }
+.button-light:hover { background: #e8fff1; }
+.button-ghost-light { border-color: rgba(255,255,255,.5); color: #fff; }
+.button-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+.button-large { min-height: 58px; padding-inline: 26px; }
+.media-frame { position: relative; overflow: hidden; margin: 0; border-radius: var(--radius-lg); background: #dce8fc; box-shadow: var(--shadow); }
+.media-frame img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; }
+.media-frame figcaption { position: absolute; right: 14px; bottom: 14px; max-width: calc(100% - 28px); padding: 6px 10px; border-radius: 6px; background: rgba(16,39,95,.78); color: #fff; font-size: .72rem; line-height: 1.2; }
+
+.stats { background: var(--mist); border-bottom: 1px solid var(--line); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-block: 36px; }
+.stat-item { text-align: center; }
+.stat-value { display: block; margin-bottom: 4px; font-family: Poppins, sans-serif; font-size: clamp(2rem, 4vw, 3.15rem); line-height: 1; }
+.stat-value.blue { color: var(--blue-900); }
+.stat-value.green { color: var(--green-600); }
+.stat-item span { color: var(--muted); font-size: .88rem; font-weight: 600; }
+
+.section { padding-block: clamp(74px, 9vw, 128px); }
+.section-heading { max-width: 740px; margin-bottom: 48px; }
+.section-heading > p:last-child { max-width: 620px; color: var(--muted); font-size: 1.1rem; }
+.section-heading-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .75fr); gap: 42px; align-items: end; max-width: none; }
+.section-heading-split > p { margin: 0 0 8px; color: var(--muted); font-size: 1.05rem; }
+.section-benefits { background: #fff; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit-card { min-height: 270px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-md); background: #fff; transition: transform .22s var(--ease-out), box-shadow .22s ease, border-color .22s ease; }
+.benefit-card:hover { transform: translateY(-5px); border-color: #bfd0f7; box-shadow: var(--shadow); }
+.number-mark { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-bottom: 28px; border-radius: 50%; background: var(--blue-100); color: var(--blue-900); font-family: Poppins, sans-serif; font-weight: 800; }
+.benefit-card:nth-child(even) .number-mark { background: var(--green-100); color: var(--green-700); }
+.benefit-card h3 { margin-bottom: 12px; }
+.benefit-card p { margin-bottom: 0; color: var(--muted); }
+
+.section-courses { background: var(--mist); }
+.course-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.course-card { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 14px; padding: 18px 20px; border: 1px solid var(--line); background: #fff; transition: transform .18s var(--ease-out), border-color .18s ease, box-shadow .18s ease; }
+.course-card:hover { transform: translateX(4px); border-color: #b8caef; box-shadow: 0 10px 24px rgba(20, 55, 120, .08); }
+.course-index { color: var(--green-700); font-family: Poppins, sans-serif; font-size: .8rem; font-weight: 800; }
+.course-card strong, .course-card small { display: block; }
+.course-card strong { color: var(--blue-950); }
+.course-card small { color: var(--muted); font-size: .76rem; }
+.course-arrow { color: var(--blue-700); font-size: 1.3rem; }
+
+.section-facilities { background: #fff; }
+.facility-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: clamp(38px, 8vw, 110px); align-items: center; }
+.facility-media img { min-height: 440px; }
+.facility-copy { max-width: 560px; }
+.facility-copy > p:not(.eyebrow) { margin-bottom: 26px; color: var(--muted); font-size: 1.08rem; }
+.text-link { display: inline-flex; align-items: center; gap: 10px; color: var(--blue-800); font-weight: 800; }
+.text-link:hover { color: var(--green-700); }
+
+.section-umuarama { position: relative; overflow: hidden; background: linear-gradient(118deg, var(--blue-950), var(--green-700)); color: #fff; }
+.umuarama-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .88fr); gap: clamp(42px, 8vw, 110px); align-items: center; }
+.umuarama-copy h2 { color: #fff; }
+.umuarama-copy > p:not(.eyebrow) { max-width: 620px; color: #dae6ff; font-size: 1.08rem; }
+.contact-card { max-width: 590px; margin: 28px 0; padding: 22px; border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-md); background: rgba(255,255,255,.1); }
+.contact-card h3 { color: #fff; }
+.contact-card p { margin-bottom: 7px; color: #e3ecff; }
+.contact-card p:last-child { margin-bottom: 0; }
+.contact-card a { text-decoration: underline; text-underline-offset: 3px; }
+.umuarama-media img { min-height: 450px; }
+
+.section-timeline { background: var(--mist); }
+.timeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.timeline-card { min-height: 240px; padding: 28px; border: 1px solid var(--line); background: #fff; }
+.timeline-card-featured { border: 2px solid var(--green-600); }
+.timeline-year { display: block; margin-bottom: 12px; color: var(--blue-900); font-family: Poppins, sans-serif; font-size: 2.7rem; line-height: 1; }
+.timeline-card-featured .timeline-year { color: var(--green-700); }
+.timeline-card h3 { margin-bottom: 18px; }
+.timeline-card ul { margin: 0; padding: 0; list-style: none; color: var(--muted); }
+.timeline-card li + li { margin-top: 5px; }
+.timeline-card li::before { content: "—"; margin-right: 8px; color: var(--green-600); }
+
+.cta { background: var(--blue-900); color: #fff; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 34px; padding-block: 62px; }
+.cta h2 { margin-bottom: 10px; color: #fff; }
+.cta p:not(.eyebrow) { margin-bottom: 0; color: #dbe6ff; font-size: 1.05rem; }
+
+.site-footer { background: #0d1b3f; color: #b9c7e2; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 44px; padding-block: 56px 40px; }
+.footer-brand { display: inline-block; margin-bottom: 14px; color: #fff; font-family: Poppins, sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -.04em; }
+.footer-brand span { color: #65e199; padding-inline: 3px; }
+.footer-grid p { max-width: 360px; margin-bottom: 0; }
+.footer-grid h3 { margin-bottom: 13px; color: #fff; font-size: 1rem; }
+.footer-grid a, .footer-grid span { display: block; margin-bottom: 7px; font-size: .9rem; }
+.footer-grid a:hover { color: #fff; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-block: 18px; border-top: 1px solid rgba(255,255,255,.12); font-size: .78rem; }
+
+.reveal { opacity: 1; transform: none; }
+.js-enabled .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }
+.js-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+    .hero-grid, .facility-grid, .umuarama-grid { grid-template-columns: 1fr; }
+    .hero-grid { min-height: auto; padding-block: 64px 74px; }
+    .hero-copy { max-width: 720px; }
+    .hero-media { max-width: 720px; }
+    .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+    .facility-copy { max-width: 720px; }
+    .umuarama-copy { order: 1; }
+    .umuarama-media { order: 0; max-width: 720px; }
+    .timeline-grid { grid-template-columns: 1fr; }
+    .timeline-card { min-height: auto; }
+}
+
+@media (max-width: 720px) {
+    .container { width: min(100% - 32px, 1160px); }
+    .header-inner { min-height: 72px; }
+    .brand { gap: 10px; }
+    .brand img:first-child { width: 126px; }
+    .brand-ccm { width: 40px; height: 40px; }
+    .brand-divider { height: 30px; }
+    .menu-toggle { display: block; }
+    .main-nav { position: fixed; inset: 72px 0 auto; display: grid; gap: 0; padding: 10px 16px 18px; border-bottom: 1px solid var(--line); background: #fff; box-shadow: 0 18px 30px rgba(23,61,150,.12); transform: translateY(-140%); transition: transform .22s var(--ease-out); }
+    .main-nav.is-open { transform: translateY(0); }
+    .main-nav a { padding: 14px 8px; border-bottom: 1px solid var(--line); }
+    .main-nav a:last-child { border-bottom: 0; }
+    .hero-grid { gap: 38px; padding-block: 52px 58px; }
+    h1 { font-size: clamp(2.6rem, 12vw, 4rem); }
+    h2 { font-size: clamp(2rem, 10vw, 3rem); }
+    .hero-lead { font-size: 1rem; }
+    .media-frame img { min-height: 260px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 12px; padding-block: 30px; }
+    .stat-item span { font-size: .76rem; }
+    .section { padding-block: 68px; }
+    .section-heading-split { grid-template-columns: 1fr; gap: 0; }
+    .benefit-grid, .course-grid { grid-template-columns: 1fr; }
+    .benefit-card { min-height: auto; }
+    .facility-media img, .umuarama-media img { min-height: 300px; }
+    .cta-inner { align-items: flex-start; flex-direction: column; padding-block: 50px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 28px; }
+    .footer-bottom { flex-direction: column; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

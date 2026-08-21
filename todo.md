@@ -1,13 +1,13 @@
 # Conversão para HTML, CSS, JavaScript e PHP
 
-- [ ] Criar `index.php` com a estrutura semântica completa do site.
-- [ ] Criar `assets/css/style.css` com estilos responsivos e sem dependências externas de UI.
-- [ ] Criar `assets/js/script.js` para navegação móvel, rolagem suave e interações leves.
-- [ ] Criar `includes/header.php` e `includes/footer.php` para reutilização mínima em PHP.
-- [ ] Remover a dependência do React, Tailwind, Vite e componentes shadcn do fluxo principal.
-- [ ] Manter as imagens reais já aprovadas e os links oficiais.
-- [ ] Verificar HTML, PHP, CSS, JavaScript, responsividade e arquivos desnecessários.
-- [ ] Salvar checkpoint final após os testes.
+- [x] Criar `index.php` com a estrutura semântica completa do site.
+- [x] Criar `assets/css/style.css` com estilos responsivos e sem dependências externas de UI.
+- [x] Criar `assets/js/script.js` para navegação móvel, rolagem suave e interações leves.
+- [x] Manter a página em um único `index.php`, evitando parciais desnecessárias.
+- [x] Remover a dependência do React, Tailwind e componentes shadcn do fluxo principal; manter apenas o Vite mínimo para a pré-visualização gerenciada.
+- [x] Manter imagens reais de instalações sem alunos e links oficiais.
+- [x] Verificar HTML, PHP, CSS, JavaScript, responsividade e arquivos desnecessários.
+- [x] Salvar checkpoint final após os testes.
 
 ## Decisões
 
@@ -26,8 +26,8 @@
 ## Status
 
 - [ ] Em andamento
-- [ ] Revisado
-- [ ] Entregue
+- [x] Revisado
+- [x] Entregue
 
 Este arquivo é de acompanhamento interno e não faz parte da página pública.
 
