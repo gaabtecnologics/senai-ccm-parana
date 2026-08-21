@@ -65,3 +65,9 @@ Este arquivo é de acompanhamento interno e não faz parte da página pública.
 ## Objetivo de entrega
 
 Uma base simples e legível, com poucos arquivos, separação clara entre marcação, estilo, comportamento e parciais PHP, pronta para ser hospedada em um servidor com PHP.
+
+## Simplificação do ambiente de pré-visualização
+
+- [x] Substituir `vite.config.ts` por `vite.config.js` sem tipos TypeScript.
+- [x] Preservar apenas o proxy de imagens e a configuração necessária para a pré-visualização.
+- [x] Reiniciar e validar o ambiente depois da troca.
